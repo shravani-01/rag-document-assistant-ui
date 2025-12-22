@@ -15,7 +15,7 @@ except (FileNotFoundError, KeyError):
     from dotenv import load_dotenv
     import os
     load_dotenv()
-    API_KEY = os.getenv("RAG_API_KEY", "9614c110-24c1-4dad-94dd-2aa4b9ab6964") # Fallback for local dev
+    API_KEY = os.getenv("RAG_API_KEY", "dummy-key-for-local-dev-only") # Fallback for local dev
     API_URL = os.getenv("RAG_API_URL", "https://rag-genai-api-t6kt2462uq-uc.a.run.app")
     
 
