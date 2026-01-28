@@ -301,6 +301,24 @@ gcloud beta run services logs read rag-ui --region=us-central1
 
 <img width="1429" height="771" alt="image" src="https://github.com/user-attachments/assets/3c300271-6b71-4563-8abe-81f03c5ff019" />
 
+## Data Flow
+
+- Document Ingestion: PDF → GCS Storage → ChromaDB (embeddings)
+
+- Query Processing: User → Streamlit → FastAPI → ChromaDB (search) → Gemini → Response
+
+- Response Generation: Context + Query → Gemini → Formatted Answer → User
+
+## Deployment Notes
+
+- All microservices are containerized using Docker
+
+- Services communicate via HTTP/REST APIs
+
+- Environment variables managed via Cloud Run configuration
+
+- Secrets managed via Google Secret Manager or environment files
+
 
 
 
