@@ -22,22 +22,23 @@ A production-ready Retrieval-Augmented Generation (RAG) system deployed on Googl
 - **Responsive Design**: Works on desktop and mobile devices
 
 ## 🏗️ Architecture
-┌─────────────────┐ ┌─────────────────┐ ┌─────────────────┐
-│ Streamlit UI │────▶│ FastAPI Backend │────▶│ Google Gemini │
-│ (Cloud Run) │ │ (Cloud Run) │ │ API │
-└─────────────────┘ └─────────────────┘ └─────────────────┘
-│ │ │
-│ ▼ │
-│ ┌─────────────────┐ │
-└─────────────▶│ ChromaDB │◀──────────────┘
-│ Vector Store │
-└─────────────────┘
-│
-▼
-┌─────────────────┐
-│ Google Cloud │
-│ Storage │
-└─────────────────┘
+
+```mermaid
+flowchart TD
+    A[📱 Streamlit UI<br/><small>Cloud Run</small>] -->|Query| B[⚡ FastAPI Backend<br/><small>Cloud Run</small>]
+    B -->|Generate Response| C[🤖 Google Gemini API]
+    B -->|Semantic Search| D[🗄️ ChromaDB Vector Store]
+    D -->|Store/Load| E[☁️ Google Cloud Storage]
+    C -->|Response| B
+    B -->|Answer| A
+    
+    style A fill:#ff6b6b,color:#fff
+    style B fill:#4ecdc4,color:#fff
+    style C fill:#45b7d1,color:#fff
+    style D fill:#96ceb4,color:#000
+    style E fill:#feca57,color:#000
+```
+
 
 
 ## 📋 Prerequisites
