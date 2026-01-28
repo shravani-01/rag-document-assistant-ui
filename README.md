@@ -27,7 +27,7 @@ A production-ready Retrieval-Augmented Generation (RAG) system deployed on Googl
 flowchart TD
     A[📱 Streamlit UI<br/><small>Cloud Run</small>] -->|Query| B[⚡ FastAPI Backend<br/><small>Cloud Run</small>]
     B -->|Generate Response| C[🤖 Google Gemini API]
-    B -->|Semantic Search| D[🗄️ ChromaDB Vector Store]
+    B -->|Semantic Search| D[🗄️ FAISS Vector Store]
     D -->|Store/Load| E[☁️ Google Cloud Storage]
     C -->|Response| B
     B -->|Answer| A
