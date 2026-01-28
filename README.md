@@ -293,6 +293,17 @@ gcloud beta run services logs read rag-ui --region=us-central1
 
 - Use descriptive commit messages
 
+## AI Demo
+
+<img width="1429" height="850" alt="image" src="https://github.com/user-attachments/assets/58502a96-76bf-4fc8-b33b-b622bc520f0a" />
+
+<img width="1423" height="817" alt="image" src="https://github.com/user-attachments/assets/f5d96004-f464-4da3-b1d3-7678d994a37b" />
+
+<img width="1429" height="771" alt="image" src="https://github.com/user-attachments/assets/3c300271-6b71-4563-8abe-81f03c5ff019" />
+
+
+
+
 
 
 
